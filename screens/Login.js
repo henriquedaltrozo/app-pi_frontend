@@ -1,6 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useState } from "react";
-import { Alert, StatusBar, StyleSheet, View } from "react-native";
+import { Alert, StatusBar, StyleSheet, View, Image, SafeAreaView } from "react-native";
 import { Button, Input, Text } from "react-native-elements";
 import { ActivityIndicator } from "react-native-paper";
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -76,6 +76,8 @@ export default function Login({ navigation }) {
         <>
           <StatusBar barStyle="default"/>
 
+          <Image style={styles.loginImage} source={require('../image/logo-sensorflow.jpeg')}/>
+
           <Text style={styles.loginTitle}>Entre no Sensor Flow</Text>
           
           <Input
@@ -109,7 +111,7 @@ export default function Login({ navigation }) {
           )}
           
           <Button
-            icon={<Icon name="user" size={15} color="white" />}
+            icon={<Icon name="edit" size={15} color="white" />}
             title=" Cadastrar"
             buttonStyle={styles.button}
             onPress={() => cadastrar()}
@@ -123,7 +125,7 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#001436",
+    backgroundColor: "#000947",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -134,7 +136,12 @@ const styles = StyleSheet.create({
   },
   loginTitle: {
     color: "#fff",
-    fontSize: 24,
+    fontSize: 21,
     padding: 10,
   },
+  loginImage: {
+    height: 190,
+    width: 220,
+    margin: 20,
+  }
 });

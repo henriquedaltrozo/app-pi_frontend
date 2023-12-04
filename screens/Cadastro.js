@@ -96,10 +96,10 @@ export default function Cadastro({ navigation }) {
       //keyboardVerticalOffset={100}
     >
       <ScrollView style={styles.scrollStyle}>
-        <Text style={styles.texto}> Cadastre-se no SensorFlow: </Text>
+        <Text style={styles.texto}> Crie sua conta no SensorFlow: </Text>
 
         <Input
-          placeholder="Email:"
+          placeholder="Digite seu e-mail"
           onChangeText={(value) => {
             setEmail(value);
             setErrorEmail(null);
@@ -111,7 +111,7 @@ export default function Cadastro({ navigation }) {
         />
 
         <Input
-          placeholder="Nome Completo:"
+          placeholder="Digite seu nome completo"
           onChangeText={(value) => setNome(value)}
           autoCapitalize="none"
           errorMessage={errorNome}
@@ -120,7 +120,7 @@ export default function Cadastro({ navigation }) {
 
         <View style={styles.containerMask}>
           <TextInputMask
-            placeholder="CPF:"
+            placeholder="Digite seu CPF"
             placeholderTextColor="#8A98A6"
             type="cpf"
             value={cpf}
@@ -137,7 +137,7 @@ export default function Cadastro({ navigation }) {
 
         <View style={styles.containerMask}>
           <TextInputMask
-            placeholder="Telefone:"
+            placeholder="Digite seu telefone"
             placeholderTextColor="#8A98A6"
             type={"cel-phone"}
             options={{
@@ -158,7 +158,7 @@ export default function Cadastro({ navigation }) {
         <Text style={styles.errorMessage}>{errorTelefone}</Text>
 
         <Input
-          placeholder="Senha:"
+          placeholder="Digite sua senha"
           onChangeText={(value) => setSenha(value)}
           errorMessage={errorSenha}
           autoCapitalize="none"
@@ -182,8 +182,8 @@ export default function Cadastro({ navigation }) {
 
         {!isLoading && (
           <Button
-            icon={<Icon name="check" size={15} color="white" />}
-            title="Salvar"
+            icon={<Icon name="save" size={15} color="white" />}
+            title=" Salvar"
             //titleStyle={{color: "#8A98A6"}}
             buttonStyle={styles.button}
             onPress={() => salvar()}
@@ -197,7 +197,7 @@ export default function Cadastro({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#001436",    //"#F1F0F0"
+    backgroundColor: "#000947",    //"#F1F0F0"
     alignItems: "center",
     justifyContent: "center",
     padding: 10,

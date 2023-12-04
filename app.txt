@@ -23,11 +23,7 @@ function MyStack() {
       <Stack.Screen
         name="Cadastro"
         component={Cadastro}
-        options={{
-          title: "",
-          headerTransparent: true,
-          headerTintColor: "white",
-        }}
+        options={{title: "", headerTransparent: true, headerTintColor: "white"}}
       />
     </Stack.Navigator>
   );
