@@ -78,7 +78,7 @@ export default function Perfil({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#000",
+    backgroundColor: "#000947",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20, // Ajuste o tamanho conforme necessário
     paddingVertical: 10,
     width: 300, // Defina o tamanho desejado
-    backgroundColor:"#f02637",  //"#02307c"
+    //backgroundColor:"#000947",  //"#02307c"
     borderRadius: 5,
   },
 });

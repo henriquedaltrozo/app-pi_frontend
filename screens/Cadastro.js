@@ -82,11 +82,15 @@ export default function Cadastro({ navigation }) {
         })
         .catch((error) => {
           setLoading(false);
-          const titulo = response.data.status ? "Sucesso" : "Erro";
-          console.log(response.data);
-          Alert.alert(titulo, response.data.mensagem);
+          const titulo = error.response.data.status ? "Sucesso" : "Erro";
+          console.log(error.response.data);
+          Alert.alert(titulo, error.response.data.mensagem);
         });
     }
+  };
+
+  const voltarParaLogin = () => {
+    navigation.navigate("Login");
   };
 
   return (
@@ -174,20 +178,32 @@ export default function Cadastro({ navigation }) {
           uncheckedColor="red"
           checked={isSelected}
           onPress={() => setSelected(!isSelected)}
-          textStyle={{color: "#8A98A6"}}
-          containerStyle={{backgroundColor: 'transparent', alignItems: "center", borderColor: "#8A98A6"}}
+          textStyle={{ color: "#8A98A6" }}
+          containerStyle={{
+            backgroundColor: "transparent",
+            alignItems: "center",
+            borderColor: "#8A98A6",
+          }}
         />
 
         {isLoading && <Text>Carregando...</Text>}
 
         {!isLoading && (
-          <Button
-            icon={<Icon name="save" size={15} color="white" />}
-            title=" Salvar"
-            //titleStyle={{color: "#8A98A6"}}
-            buttonStyle={styles.button}
-            onPress={() => salvar()}
-          />
+          <>
+            <Button
+              icon={<Icon name="save" size={15} color="white" />}
+              title=" Salvar"
+              //titleStyle={{color: "#8A98A6"}}
+              buttonStyle={styles.button}
+              onPress={() => salvar()}
+            />
+            <Button
+             icon={<Icon name="arrow-circle-left" size={15} color="white" />}
+              title=" Voltar"
+              buttonStyle={styles.button}
+              onPress={() => voltarParaLogin()}
+            />
+          </>
         )}
       </ScrollView>
     </KeyboardAvoidingView>
@@ -197,7 +213,7 @@ export default function Cadastro({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#000947",    //"#F1F0F0"
+    backgroundColor: "#000947", //"#F1F0F0"
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
@@ -235,9 +251,10 @@ const styles = StyleSheet.create({
   texto: {
     fontSize: 24,
     marginTop: 30,
-    marginBottom: 10,
+    marginBottom: 15,
     paddingLeft: 4,
     textAlign: "center",
     color: "#fff",
   },
 });
+

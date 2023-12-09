@@ -16,6 +16,7 @@ export default function Principal() {
       tabBarOptions={{
         activeTintColor: "#fff",
       }}
+      
     >
       <Tab.Screen
         name="Home"

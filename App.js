@@ -1,5 +1,8 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import {
+  CardStyleInterpolators,
+  createStackNavigator,
+} from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Login from "./screens/Login";
 import Principal from "./screens/Principal";
@@ -9,7 +12,11 @@ const Stack = createStackNavigator();
 
 function MyStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid, // ou forFadeFromBottomAndroid, etc.
+      }}
+    >
       <Stack.Screen
         name="Login"
         component={Login}

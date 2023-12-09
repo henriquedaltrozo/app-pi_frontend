@@ -11,16 +11,7 @@ const MultiLineChart = ({ chartDataList }) => {
           key={index}
           data={chartData.data}
           labels={chartData.labels}
-          title="Teste de Titulo" //{`Chart ${index + 1}`} // You can customize the title here
-        />
-      ))}
-
-      {chartDataList.map((chartData, index) => (
-        <LineChartComponent
-          key={index}
-          data={chartData.data}
-          labels={chartData.labels}
-          title="Teste de Titulo" //{`Chart ${index + 1}`} // You can customize the title here
+          //title="Velocidade do vento" //{`Chart ${index + 1}`} // You can customize the title here
         />
       ))}
     </ScrollView>
@@ -28,3 +19,4 @@ const MultiLineChart = ({ chartDataList }) => {
 };
 
 export default MultiLineChart;
+//esse é meu arquivo MultiLineChart.js
