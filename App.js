@@ -14,7 +14,7 @@ function MyStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid, // ou forFadeFromBottomAndroid, etc.
+        cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid,
       }}
     >
       <Stack.Screen

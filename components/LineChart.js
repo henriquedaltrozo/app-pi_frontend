@@ -1,4 +1,3 @@
-// LineChart.js
 import React from 'react';
 import { View, Text } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
@@ -14,15 +13,15 @@ const LineChartComponent = ({ data, labels, title }) => {
           labels,
           datasets: [{ data }],
         }}
-        width={300} // Adjust the width as needed
+        width={300} 
         height={230}
         yAxisLabel=""
         chartConfig={{
           backgroundColor: '#ffffff',
           backgroundGradientFrom: '#ffffff',
           backgroundGradientTo: '#ffffff',
-          decimalPlaces: 2, // optional, defaults to 2dp
-          color: (opacity = 1) => `rgba(0, 0, 139, ${opacity})`, // Código para azul escuro
+          decimalPlaces: 2, 
+          color: (opacity = 1) => `rgba(0, 0, 139, ${opacity})`, 
           labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
         }}
         bezier
@@ -38,4 +37,3 @@ const LineChartComponent = ({ data, labels, title }) => {
 };
 
 export default LineChartComponent;
-//esse é meu arquivo LineChart.js

@@ -97,7 +97,6 @@ export default function Cadastro({ navigation }) {
     <KeyboardAvoidingView
       behavior={Platform.OS == "ios" ? "padding" : "height"}
       style={styles.container}
-      //keyboardVerticalOffset={100}
     >
       <ScrollView style={styles.scrollStyle}>
         <Text style={styles.texto}> Crie sua conta no SensorFlow: </Text>
@@ -193,12 +192,11 @@ export default function Cadastro({ navigation }) {
             <Button
               icon={<Icon name="save" size={15} color="white" />}
               title=" Salvar"
-              //titleStyle={{color: "#8A98A6"}}
               buttonStyle={styles.button}
               onPress={() => salvar()}
             />
             <Button
-             icon={<Icon name="arrow-circle-left" size={15} color="white" />}
+              icon={<Icon name="arrow-circle-left" size={15} color="white" />}
               title=" Voltar"
               buttonStyle={styles.button}
               onPress={() => voltarParaLogin()}
@@ -257,4 +255,3 @@ const styles = StyleSheet.create({
     color: "#fff",
   },
 });
-

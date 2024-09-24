@@ -7,29 +7,23 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
-//import graficos
 import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native";
 import MultiLineChart from "../components/MultiLineChart";
-//import card
 import InfoCard from "../components/InfoCard";
 
 export default function Home() {
-  //select list
   const [selected, setSelected] = React.useState("");
   const data = [
-    { key: "1", value: "Santa Rosa" }, //disabled:true
+    { key: "1", value: "Santa Rosa" },
     { key: "2", value: "Ijuí", disabled: true },
-    //{ key: "3", value: "Panambi", disabled: true },
   ];
 
-  //infos
   const [temp, setTemp] = useState([]);
   const [humidity, setHumidity] = useState([]);
   const [wind, setWind] = useState([]);
   const [solarRadiation, setSolarRadiation] = useState([]);
 
-  //graficos 30min
   const [temperatureDataAtt, setTemperatureDataAtt] = useState([]);
   const [humidityDataAtt, setHumidityDataAtt] = useState([]);
   const [atmPresDataAtt, setAtmPresDataAtt] = useState([]);
@@ -50,20 +44,17 @@ export default function Home() {
     fetchUvDataAtt();
   }, []);
 
-  //dados cards
   const fetchTemperature = async () => {
     try {
       const response = await fetch("http://192.168.2.115:3001/getTemperature");
       const data = await response.json();
 
-      // Transform the data to the desired format
       const formattedData = {
         temp: [
           {
             data: data.map((item) => item.emw_temperature),
             labels: data.map((item, index) => (index + 1).toString()),
           },
-          // You can add more datasets as needed
         ],
       };
       setTemp(formattedData.temp);
@@ -134,7 +125,6 @@ export default function Home() {
     }
   };
 
-  //grafico att
   const fetchTemperatureDataAtt = async () => {
     try {
       const response = await fetch(
@@ -142,14 +132,12 @@ export default function Home() {
       );
       const data = await response.json();
 
-      // Transform the data to the desired format
       const formattedData = {
         temperatureDataAtt: [
           {
             data: data.map((item) => item.emw_temperature),
             labels: data.map((item, index) => (index + 1).toString()),
           },
-          // You can add more datasets as needed
         ],
       };
 
@@ -267,7 +255,6 @@ export default function Home() {
     }
   };
 
-  //menu
   const [content1Visible, setContent1Visible] = useState(false);
   const [content2Visible, setContent2Visible] = useState(false);
   const [content3Visible, setContent3Visible] = useState(false);
@@ -310,8 +297,6 @@ export default function Home() {
             setSelected={(val) => setSelected(val)}
             data={data}
             save="value"
-            //onSelect={() => alert(selected)}
-            //search={false}
             boxStyles={{
               borderRadius: 6,
               backgroundColor: "#fff",
@@ -334,7 +319,6 @@ export default function Home() {
             disabledItemStyles={{ backgroundColor: "#fff" }}
             disabledTextStyles={{ color: "#999" }}
             defaultOption={{ key: "1", value: "Santa Rosa" }}
-            //defaultOption={{ key: "0", value: "Selecione uma opção" }}
             searchPlaceholder="Procure uma cidade"
           />
 

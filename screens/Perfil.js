@@ -26,44 +26,37 @@ export default function Perfil({ navigation }) {
         icon={<Icon name="user" size={15} color="white" />}
         title=" Conta"
         buttonStyle={styles.button}
-        //onPress={}
       />
 
       <Button
         icon={<Icon name="pencil" size={15} color="white" />}
         title=" Editar Perfil"
         buttonStyle={styles.button}
-        //onPress={}
       />
 
       <Button
         icon={<Icon name="gear" size={15} color="white" />}
         title=" Configurações"
         buttonStyle={styles.button}
-        //onPress={}
       />
 
       <Button
         icon={<Icon name="file" size={15} color="white" />}
         title=" Termos e Serviços"
         buttonStyle={styles.button}
-        //onPress={}
       />
 
       <Button
         icon={<Icon name="info-circle" size={15} color="white" />}
         title=" Sobre"
         buttonStyle={styles.button}
-        //onPress={}
       />
 
       <Button
         icon={<Icon name="shield" size={15} color="white" />}
         title=" Política de Privacidade"
         buttonStyle={styles.button}
-        //onPress={}
       />
-
 
       <Button
         icon={<Icon name="sign-out" size={15} color="white" />}
@@ -84,11 +77,9 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 10,
-    paddingHorizontal: 20, // Ajuste o tamanho conforme necessário
+    paddingHorizontal: 20,
     paddingVertical: 10,
-    width: 300, // Defina o tamanho desejado
-    //backgroundColor:"#000947",  //"#02307c"
+    width: 300,
     borderRadius: 5,
   },
 });
-

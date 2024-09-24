@@ -3,7 +3,6 @@ import axios from "axios";
 
 class UsuarioService {
   async cadastrar(data) {
-    //console.log(data); //teste
     return axios({
       url: "http://192.168.2.115:3000/usuario/cadastrar",
       method: "POST",
@@ -22,7 +21,6 @@ class UsuarioService {
   }
 
   async login(data) {
-    //console.log(data); //teste
     return axios({
       url: "http://192.168.2.115:3000/usuario/login",
       method: "POST",
@@ -42,7 +40,6 @@ class UsuarioService {
   }
 
   async loginComToken(data) {
-    console.log(data); //teste
     return axios({
       url: "http://192.168.2.115:3000/usuario/login-token",
       method: "POST",

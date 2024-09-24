@@ -1,6 +1,12 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useState } from "react";
-import { Alert, StatusBar, StyleSheet, View, Image, SafeAreaView } from "react-native";
+import {
+  Alert,
+  StatusBar,
+  StyleSheet,
+  View,
+  Image,
+} from "react-native";
 import { Button, Input, Text } from "react-native-elements";
 import { ActivityIndicator } from "react-native-paper";
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -60,7 +66,7 @@ export default function Login({ navigation }) {
   useEffect(() => {
     AsyncStorage.getItem("TOKEN").then((token) => {
       if (token) {
-        console.log(token)
+        console.log(token);
         logarComToken(token);
       } else {
         setLoadingToken(false);
@@ -74,12 +80,15 @@ export default function Login({ navigation }) {
 
       {!isLoadingToken && (
         <>
-          <StatusBar barStyle="default"/>
+          <StatusBar barStyle="default" />
 
-          <Image style={styles.loginImage} source={require('../image/logo-sensorflow.jpeg')}/>
+          <Image
+            style={styles.loginImage}
+            source={require("../image/logo-sensorflow.jpeg")}
+          />
 
           <Text style={styles.loginTitle}>Entre no Sensor Flow</Text>
-          
+
           <Input
             placeholder="E-mail"
             leftIcon={{ type: "font-awesome", name: "envelope" }}
@@ -91,7 +100,6 @@ export default function Login({ navigation }) {
 
           <Input
             placeholder="Senha"
-            //placeholderTextColor="#fff" 
             leftIcon={{ type: "font-awesome", name: "lock" }}
             onChangeText={(value) => setPassword(value)}
             autoCapitalize="none"
@@ -109,7 +117,7 @@ export default function Login({ navigation }) {
               onPress={() => entrar()}
             />
           )}
-          
+
           <Button
             icon={<Icon name="edit" size={15} color="white" />}
             title=" Cadastrar"
@@ -143,9 +151,5 @@ const styles = StyleSheet.create({
     height: 190,
     width: 220,
     margin: 20,
-  }
+  },
 });
-
-
-
-

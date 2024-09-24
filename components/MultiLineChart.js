@@ -1,7 +1,6 @@
-// MultiLineChart.js
 import React from "react";
 import { ScrollView } from "react-native";
-import LineChartComponent from "./LineChart"; // Update the import path based on your project structure
+import LineChartComponent from "./LineChart"; 
 
 const MultiLineChart = ({ chartDataList }) => {
   return (
@@ -11,7 +10,6 @@ const MultiLineChart = ({ chartDataList }) => {
           key={index}
           data={chartData.data}
           labels={chartData.labels}
-          //title="Velocidade do vento" //{`Chart ${index + 1}`} // You can customize the title here
         />
       ))}
     </ScrollView>
@@ -19,4 +17,3 @@ const MultiLineChart = ({ chartDataList }) => {
 };
 
 export default MultiLineChart;
-//esse é meu arquivo MultiLineChart.js

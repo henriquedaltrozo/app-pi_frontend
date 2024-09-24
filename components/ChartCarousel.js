@@ -1,4 +1,3 @@
-// ChartCarousel.js
 import React from 'react';
 import { View, Dimensions, StyleSheet, Text } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
@@ -38,7 +37,7 @@ const ChartCarousel = ({ dataSets }) => {
 const styles = StyleSheet.create({
   safeAreaContainer: {
     flex: 1,
-    justifyContent: 'flex-end', // Align content at the bottom
+    justifyContent: 'flex-end', 
   },
   container: {
     flex: 1,
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
     width: '100%',
     marginBottom: 16,
     paddingHorizontal: 16,
-    justifyContent: 'center', // Center content horizontally
+    justifyContent: 'center', 
   },
   chartContainer: {
     width: '100%',
