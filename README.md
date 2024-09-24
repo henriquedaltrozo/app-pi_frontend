@@ -1,6 +1,6 @@
-# Backend do App Sensor Flow
+# Frontend do App Sensor Flow
 
-Possibilita o cadastro e login de usuários no aplicativo.
+Interface final do aplicativo.
 
 ## Tecnologias Utilizadas
 
@@ -29,4 +29,10 @@ Possibilita o cadastro e login de usuários no aplicativo.
    ```
 4. Baixe o app Expo Go em seu celular e leia o QR code.
 
-## App Final
+
+## Telas
+
+<img src="https://github.com/user-attachments/assets/b397125b-2108-489e-8551-b07a8240b21b" alt="telainicial" width="400"/>
+<img src="https://github.com/user-attachments/assets/87227a26-b56b-491b-8d75-e968cfde3299" alt="telaDeCadastro" width="400"/>
+<img src="https://github.com/user-attachments/assets/eba0cdd5-78e1-452e-ae83-b21fd8f72605" alt="home" width="400"/>
+<img src="https://github.com/user-attachments/assets/8b2bc13a-6c5e-4ecc-ab9f-5f5d78242d39" alt="homeComGrafico" width="400"/>
